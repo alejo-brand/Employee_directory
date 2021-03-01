@@ -31,7 +31,7 @@ class App extends Component {
           <Search />
         </div>  
         <div>
-          <Table />
+          <Table employees = {this.state.employees}/>
         </div>  
       </>
     );

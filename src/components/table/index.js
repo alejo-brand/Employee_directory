@@ -1,26 +1,40 @@
 import React from "react";
 
-function Table (){
+function Table (props){
   return(
     <div className = "container">
-      <table className="table table dark table-striped table-hover col-sm-8">
+      <table className="table table dark table-striped table-hover col-sm-10">
       <thead>
         <tr>
-          <th scope="col">Country</th>
           <th scope="col">Email</th>
           <th scope="col">First</th>
           <th scope="col">Last</th>
           <th scope="col">Phone</th>
           <th scope="col">Picture</th>
+          <th scope="col">Country</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
+      <tbody>{props.employees.length > 0 ? props.employees.map(employee => {
+        return(
+          <tr>
+
+            <td>{employee.email}</td>
+            <td>{employee.name.first}</td>
+            <td>{employee.name.last}</td>
+            <td>{employee.phone}</td>
+            <td><img src ={employee.picture.thumbnail} alt= "employee"/></td>
+            <td>{employee.location.country}</td>
+            <td></td>
+          </tr>
+        )
+      }):
+      <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    }
       </tbody>
       </table>
     </div>
