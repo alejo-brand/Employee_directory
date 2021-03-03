@@ -1,4 +1,7 @@
 import React from "react";
+import { faArrowsAltV } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+const arrows = <FontAwesomeIcon icon = {faArrowsAltV}/>
 
 function Table (props){
   return(
@@ -7,7 +10,7 @@ function Table (props){
       <thead>
         <tr>
           <th scope="col">Email</th>
-          <th scope="col" onClick = {props.handleSortChange}>First</th>
+          <th scope="col" onClick = {props.handleSortChange}>First  {arrows}</th>
           <th scope="col">Last</th>
           <th scope="col">Phone</th>
           <th scope="col">Picture</th>

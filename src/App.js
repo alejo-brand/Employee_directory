@@ -30,7 +30,7 @@ class App extends Component {
     this.setState({employees:newEmoployee})
   }
 handleSortChange = () =>{
-  const newEmployees = this.state.employees.sort((a,b)=> a.name.first.toLocaleCompare(b.name.first))
+  const newEmployees = this.state.employees.sort((a,b)=> a.name.first.localeCompare(b.name.first))
   this.setState({employees:newEmployees})
 }
   render(){
