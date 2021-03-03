@@ -3,11 +3,11 @@ import React from "react";
 function Table (props){
   return(
     <div className = "container">
-      <table className="table table dark table-striped table-hover col-sm-10">
+      <table className="table table-dark table-striped table-hover col-sm-10">
       <thead>
         <tr>
           <th scope="col">Email</th>
-          <th scope="col">First</th>
+          <th scope="col" onClick = {props.handleSortChange}>First</th>
           <th scope="col">Last</th>
           <th scope="col">Phone</th>
           <th scope="col">Picture</th>

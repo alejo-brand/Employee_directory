@@ -2,10 +2,10 @@ import React from "react";
 // eslint-disable-next-line no-unused-vars
 function Header(){
   return(
-    <div className="jumbotron jumbotron-fluid">
+    <div className="jumbotron jumbotron-fluid bg-dark text-light">
       <div className="container">
         <h1 className="display-4">Employee Directory</h1>
-        <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <p className="lead">Search by Name or sort by category</p>
       </div>
     </div>
   );
